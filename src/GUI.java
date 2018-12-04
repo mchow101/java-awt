@@ -60,15 +60,16 @@ public class GUI {
 			g.drawLine(0, y/4, x, y/4); // Draw a line 
 			// This line is across the frame 25% of the way down
 			
+			// Draw multiple circles
 			for(int i = 0; i < 10; i++) {
 				int circleXPos = x/2 - i*5; // Set the center of the circle in the middle of the screen
 				int circleYPos = y/2 - i*5; 
 				int circleSize = i*10; // Increase the radius of each circle by 10 pixels
 				
-				Color color = new Color(255 - i * 25, i * 25, 255 - i * 25);
+				Color color = new Color(255 - i * 25, i * 25, 255 - i * 25); // Have fun with colors
 				g.setColor(color);
 				
-				g.drawOval(circleXPos, circleYPos, circleSize, circleSize); // Draw multiple circles
+				g.drawOval(circleXPos, circleYPos, circleSize, circleSize); // Draw next circle
 			}
 
 			icon = Toolkit.getDefaultToolkit().getImage("src/icon.png"); // Load an image from source folder
